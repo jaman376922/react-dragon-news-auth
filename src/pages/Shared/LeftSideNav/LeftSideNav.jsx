@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const LeftSideNav = () => {
     const [categories, setCategories] = useState([]);
+    
 
     useEffect(() => {
         fetch('categories.json')
@@ -20,7 +21,10 @@ const LeftSideNav = () => {
                     to={`/category/${category.id}`}
                     >{category.name}</Link>)
             }
+             
         </div>
+
+        
     );
 };
 
